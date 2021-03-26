@@ -1,67 +1,444 @@
-Code Documentation
-===================
-
+Code Documentation\ `¶ <#code-documentation>`__
+===============================================
 
 1. Docstring Controller Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.Ui_Controller
-    :members:
+*class*\ ``MoildevApps.Ui_Controller.``\ ``Controller``\ (*parent=None*)\ `¶ <#MoildevApps.Ui_Controller.Controller>`__
+    The controller class to control UI MainWindow
 
+    ``aboutUs``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.aboutUs>`__
+        showing prompt About us information (MOIL LAB)
+
+    ``cameraOpen``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.cameraOpen>`__
+        Open camera following the source given.
+
+    ``closeEvent``\ (*event*)\ `¶ <#MoildevApps.Ui_Controller.Controller.closeEvent>`__
+        Control exit application by ask yes or no question.
+
+    ``connect_button``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.connect_button>`__
+        Connect the button and event to the function
+
+    ``exit``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.exit>`__
+        Exit the apps with showing the QMessageBox.
+
+    ``help``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.help>`__
+        showing the message box to show help information obout this
+        application
+
+    ``importMoildev``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.importMoildev>`__
+        Instantiate moildev library
+
+    ``init_Map``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.init_Map>`__
+        create initial mapX and mapY
+
+    ``init_ori_ratio``\ (*image*)\ `¶ <#MoildevApps.Ui_Controller.Controller.init_ori_ratio>`__
+        Calculate the initial ratio of the image. :param ratio\_x =
+        ratio width between image and ui window.: :param ratio\_y =
+        ratio height between image and ui window.: :param center = find
+        the center image on window user interface.:
+
+        Returns
+            ratio\_y: center:
+
+
+    ``init_parameter``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.init_parameter>`__
+        create initial parameter
+
+    ``menuMouseEvent``\ (*e*)\ `¶ <#MoildevApps.Ui_Controller.Controller.menuMouseEvent>`__
+        showing the menu image when release left click.
+
+    ``mouseDoubleclic_event``\ (*e*)\ `¶ <#MoildevApps.Ui_Controller.Controller.mouseDoubleclic_event>`__
+        Reset to default by mouse event.
+
+    ``mouseMovedOriImage``\ (*e*)\ `¶ <#MoildevApps.Ui_Controller.Controller.mouseMovedOriImage>`__
+        Mouse move event to look in surrounding view in original label
+        image
+
+    ``mouse_event``\ (*e*)\ `¶ <#MoildevApps.Ui_Controller.Controller.mouse_event>`__
+        Specify coordinate from mouse left event.
+
+    ``mouse_release_event``\ (*e*)\ `¶ <#MoildevApps.Ui_Controller.Controller.mouse_release_event>`__
+        Mouse release event left click to show menu.
+
+    ``mouse_wheelEvent``\ (*e*)\ `¶ <#MoildevApps.Ui_Controller.Controller.mouse_wheelEvent>`__
+        Resize image using mouse wheel event.
+
+    ``next_frame_slot``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.next_frame_slot>`__
+        Control video frame.
+
+    ``onclick_open_camera``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.onclick_open_camera>`__
+        showing the window to select the source camera
+
+    ``open_image``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.open_image>`__
+        Load image frame
+
+    ``open_video_file``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.open_video_file>`__
+        Load video file.
+
+    ``saveImage``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.saveImage>`__
+        Save image on local directory
+
+    ``selectDir``\ ()`¶ <#MoildevApps.Ui_Controller.Controller.selectDir>`__
+        Select directory to save object such as image and video.
 
 2. Docstring Utils Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.Ui_Utils
-    :members:
+``MoildevApps.Ui_Utils.``\ ``Rotate``\ (*src*, *angle*, *center=None*, *scale=1.0*)\ `¶ <#MoildevApps.Ui_Utils.Rotate>`__
+    Turn an image in a clockwise or counterclockwise direction.
 
+    Parameters
+        -  **src** – original image
+
+        -  **angle** – the value angle for turn the image
+
+        -  **center** – determine the specific coordinate to rotate
+           image
+
+        -  **scale** – scale image
+
+    Returns
+        rotated image
+
+
+``MoildevApps.Ui_Utils.``\ ``drawPoint``\ (*image*, *heightImage*, *coordinatePoint*)\ `¶ <#MoildevApps.Ui_Utils.drawPoint>`__
+    Drawing the dot on the image from the coordinate given
+
+    Parameters
+        -  **image** – Image
+
+        -  **heightImage** – to determine the point size in the image
+
+        -  **coordinatePoint** – determine the location of the point in
+           the image
+
+    Returns
+        image
+
+``MoildevApps.Ui_Utils.``\ ``read_image``\ (*image\_path*)\ `¶ <#MoildevApps.Ui_Utils.read_image>`__
+    Reading the image from given file path
+
+    Parameters
+        **image\_path** – image to be read from the image\_path
+
+    Returns
+        img
+
+``MoildevApps.Ui_Utils.``\ ``saveImage``\ (*filename*, *image*)\ `¶ <#MoildevApps.Ui_Utils.saveImage>`__
+    Saving images and give a name to store in local directory
+
+    Parameters
+        -  **filename** – give the image a filename
+
+        -  **image** – the captured image
+
+    Returns
+        None
+
+``MoildevApps.Ui_Utils.``\ ``select_file``\ (*title*, *dir\_path*, *file\_filter*)\ `¶ <#MoildevApps.Ui_Utils.select_file>`__
+    find the file path from the directory computer
+
+    Parameters
+        -  **title** – the title window of open dialog
+
+        -  **file\_filter** – determine the specific file want to search
+
+        -  **dir\_path** – Navigate to specific directory
+
+    Returns
+        file\_path
 
 3. Docstring Open Camera Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.OpenCamera
-    :members:
+*class*\ ``MoildevApps.OpenCamera.``\ ``OpenCameras``\ (*MainWindow*, *recentWindow*)\ `¶ <#MoildevApps.OpenCamera.OpenCameras>`__
+    This class is to control the window selecting camera. :param
+    MainWindow = Is the parent class window. :type MainWindow = QtWidget
+    of mainWindow UI. :param recentWindow = is the object of this recent
+    window. :type recentWindow = QtDialog inheritance from mainWindow
+    class.
 
+    ``check_port_camera``\ ()`¶ <#MoildevApps.OpenCamera.OpenCameras.check_port_camera>`__
+        Check the camera usb that available in computer
+
+        Returns
+            will showing the port camera available
+
+    ``connect_to_button``\ ()`¶ <#MoildevApps.OpenCamera.OpenCameras.connect_to_button>`__
+        This is for connect the button or event with class function.
+
+    ``exit``\ ()`¶ <#MoildevApps.OpenCamera.OpenCameras.exit>`__
+        Exit open camera window when reject the choice
+
+        Returns
+            close the window
+
+    ``handle_activated_combobox``\ ()`¶ <#MoildevApps.OpenCamera.OpenCameras.handle_activated_combobox>`__
+        This function is to handle combo box to select source camera. -
+        if select USB Camera then it will hide the object UI for
+        streaming camera - On the other hand, if you choose a streaming
+        camera, it will hide the component object UI for the USB camera
+
+    ``push_button_ok``\ ()`¶ <#MoildevApps.OpenCamera.OpenCameras.push_button_ok>`__
+        to process the final decisions the open camera
+
+        Returns
+            execute open camera function
+
+    ``video_source``\ ()`¶ <#MoildevApps.OpenCamera.OpenCameras.video_source>`__
+        To select the video source want to use
+
+        Returns
+            videoStreamURL
 
 4. Docstring Ratio Image Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.RatioImage
-    :members:
+*class*\ ``MoildevApps.RatioImage.``\ ``Set_RatioImage``\ (*MainWindow*)\ `¶ <#MoildevApps.RatioImage.Set_RatioImage>`__
+    To solve the ratio image problem where using the various of camera
+    type.h
 
+    :param parent= MainWindow of User Interface :type parent = QtWidget
+    object
+
+    ``resize_original_image``\ (*image*)\ `¶ <#MoildevApps.RatioImage.Set_RatioImage.resize_original_image>`__
+        resize image for showing on Label original image user interface
+
+        Parameters
+            -  **= original image** (*image*) –
+
+            -  **= array** (*image*) –
+
+        Returns
+            Resized image
+
+    ``resize_result_image``\ (*image*, *width\_image*)\ `¶ <#MoildevApps.RatioImage.Set_RatioImage.resize_result_image>`__
+        Resize result image and the label result image based on width
+        given
+
+        Parameters
+            -  **= array** (*image*) –
+
+            -  **= integer** (*width\_image*) –
+
+        Returns
+            Resized image
 
 5. Docstring Video Controller Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.VideoControler
-    :members:
+*class*\ ``MoildevApps.VideoControler.``\ ``Video_Controler``\ (*Mainwindow*)\ `¶ <#MoildevApps.VideoControler.Video_Controler>`__
+    The class to control the video. this class also inheritance from
+    mainwindow class. :param parent : main window class :type : -
 
+    ``changeValue``\ (*value*)\ `¶ <#MoildevApps.VideoControler.Video_Controler.changeValue>`__
+        Control slider time video.
+
+    ``connectToButton``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.connectToButton>`__
+        This functions to connect each button on the user interface
+
+    ``controler``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.controler>`__
+        Manage the video to setup the current timer.
+
+    ``pause_video``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.pause_video>`__
+        Pause video.
+
+    ``play_video``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.play_video>`__
+        Play video.
+
+    ``prev_video``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.prev_video>`__
+        Previous video in 5 second.
+
+    ``recordVideo``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.recordVideo>`__
+        Create video writer to save video.
+
+    ``reset_time``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.reset_time>`__
+        Reset the time when open the new video.
+
+    ``selectDir``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.selectDir>`__
+        Select destination directory to save the video file.
+
+    ``skip_video``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.skip_video>`__
+        skip video in 5 second.
+
+    ``stop_camera``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.stop_camera>`__
+        Stop camera and clear label view.
+
+    ``stop_video``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.stop_video>`__
+        Stop Video.
+
+    ``videoButtonCamera``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.videoButtonCamera>`__
+        Control the video controller when in camera mode
+
+    ``videoButtonDisable``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.videoButtonDisable>`__
+        This method has function to disable the buttons control video
+        when not in video mode.
+
+    ``videoButtonEnable``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.videoButtonEnable>`__
+        This method has function to enable the buttons control video
+        when in video mode.
+
+    ``videoPlayPouse``\ ()`¶ <#MoildevApps.VideoControler.Video_Controler.videoPlayPouse>`__
+        Control play and pause when playing video or camera.
 
 6. Docstring Anypoint Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.View_Anypoint
-    :members:
+*class*\ ``MoildevApps.View_Anypoint.``\ ``AnyPoint``\ (*MainWindow*)\ `¶ <#MoildevApps.View_Anypoint.AnyPoint>`__
+    Anypoint class to process image on anypoint view
 
+    ``anypoint_mode_1``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.anypoint_mode_1>`__
+        Determine the anypoint mode 1.
+
+    ``anypoint_mode_2``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.anypoint_mode_2>`__
+        Determine the anypoint mode 2.
+
+    ``anypoint_view``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.anypoint_view>`__
+        The method to clearly process image on anypoint view.
+
+    ``center``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.center>`__
+        The method showing anypoint view in specific area.
+
+    ``connectToButton``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.connectToButton>`__
+        the method for connected function and event on main window user
+        interface.
+
+    ``down``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.down>`__
+        The method showing anypoint view in specific area.
+
+    ``drawPolygon``\ (*image*, *mapX*, *mapY*)\ `¶ <#MoildevApps.View_Anypoint.AnyPoint.drawPolygon>`__
+        Draw polygon from mapX and mapY given in the original image.
+        :param image: Original image :param mapX: map image X from
+        anypoint process :param mapY: map image Y from anypoint process
+
+        Returns
+            image
+
+    ``left``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.left>`__
+        The method showing anypoint view in specific area.
+
+    ``onclickAnypoint``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.onclickAnypoint>`__
+        The method for click button anypoint.
+
+    ``resetAlphaBeta``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.resetAlphaBeta>`__
+        The method for reset alpa, beta, zoom, and angle.
+
+    ``right``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.right>`__
+        The method showing anypoint view in specific area.
+
+    ``set_anypoint``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.set_anypoint>`__
+        the method for event on click button set anypoint when has
+        modify the parameter.
+
+    ``showPolygon``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.showPolygon>`__
+        showing the polygon on original image.
+
+    ``up``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.up>`__
+        The method showing anypoint view in specific area.
+
+    ``updateParamAnypoint``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.updateParamAnypoint>`__
+        The method for update anypoint on the beta, alpha and zoom
+
+    ``zoomValue``\ ()`¶ <#MoildevApps.View_Anypoint.AnyPoint.zoomValue>`__
+        The methode to change the zoom value when doing anypoint view.
 
 7. Docstring Panorama Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.View_Panorama
-    :members:
+*class*\ ``MoildevApps.View_Panorama.``\ ``Panorama``\ (*MainWindow*)\ `¶ <#MoildevApps.View_Panorama.Panorama>`__
+    The class to process image on panorama view :param parent= Main
+    window class :type parent = object
 
+    ``connectToButton``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.connectToButton>`__
+        This function for connect to button in user interface
+
+    ``panorama_view``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.panorama_view>`__
+        This function to process image to panorama view.
+
+    ``positionCoorX``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.positionCoorX>`__
+        Change the position coordinate center X on image recenter
+        process
+
+    ``positionCoorY``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.positionCoorY>`__
+        Change the position coordinate center Y on image recenter
+        process
+
+    ``recenterImage``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.recenterImage>`__
+        Process original image to change the original center image.
+
+    ``resetCenter``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.resetCenter>`__
+        This function for reset coordinate x and y.
+
+    ``reverseImage``\ (*dst*, *src*, *alpha*,
+        *beta*)\ `¶ <#MoildevApps.View_Panorama.Panorama.reverseImage>`__
+        reverse original image using moil SDK to recenter image.
+
+    ``setCoorCenterObject``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.setCoorCenterObject>`__
+        calculate alpha and beta from the original center image.
+
+    ``set_pano``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.set_pano>`__
+        This function for setting the maximum and minimum of panorama
+        view
+
+    ``showOriginalPanorama``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.showOriginalPanorama>`__
+        show original image when doing panorama view on the original
+        label.
+
+    ``updatePossCenter``\ ()`¶ <#MoildevApps.View_Panorama.Panorama.updatePossCenter>`__
+        Update position center x and y point in the user interface
 
 8. Docstring show Result Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.View_ShowResult
-    :members:
+*class*\ ``MoildevApps.View_ShowResult.``\ ``ShowImageResult``\ (*MainWindow*)\ `¶ <#MoildevApps.View_ShowResult.ShowImageResult>`__
+    Class to Show Image Result on user interface. :param parent : main
+    window :type parent : -
 
+    ``label_result``\ (*resultImage*, *width\_img*)\ `¶ <#MoildevApps.View_ShowResult.ShowImageResult.label_result>`__
+        This method is to resize the label result image and show the
+        result image in there.
+
+    ``showInRecenterLabel``\ (*image*)\ `¶ <#MoildevApps.View_ShowResult.ShowImageResult.showInRecenterLabel>`__
+        show the recenter label to showing the recenter image on UI.
+
+    ``showOriginalImage``\ (*imageOri*)\ `¶ <#MoildevApps.View_ShowResult.ShowImageResult.showOriginalImage>`__
+        Showing the original image in label original image UI.
+
+    ``showPanoAnyImage``\ (*image*, *angle=0*)\ `¶ <#MoildevApps.View_ShowResult.ShowImageResult.showPanoAnyImage>`__
+        The method for showing result image after process to panorama or
+        anypoint. :param image: The result image :param angle: the angle
+        if want to rotate the image
+
+        Returns
+            None
+
+    ``view_result``\ (*image*)\ `¶ <#MoildevApps.View_ShowResult.ShowImageResult.view_result>`__
+        Show the result image
 
 9. Docstring control Window Class
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.View_Window
-    :members:
+*class*\ ``MoildevApps.View_Window.``\ ``ViewWindow``\ (*MainWindow*)\ `¶ <#MoildevApps.View_Window.ViewWindow>`__
+    Class to control the window in user interface :param parent= Main
+    window :type parent = -
 
+    ``connectToButton``\ ()`¶ <#MoildevApps.View_Window.ViewWindow.connectToButton>`__
+        The method for connect the function with UI event
+
+    ``hideToolbar``\ ()`¶ <#MoildevApps.View_Window.ViewWindow.hideToolbar>`__
+        Hide the toolbar.
+
+    ``show_Maximized``\ ()`¶ <#MoildevApps.View_Window.ViewWindow.show_Maximized>`__
+        To showing the result image in maximize window. it will hide the
+        original label image.
+
+    ``show_Minimized``\ ()`¶ <#MoildevApps.View_Window.ViewWindow.show_Minimized>`__
+        To showing the result image in minimized window. it will hide
+        the original label image.
 
 10. Docstring Main Class
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: MoildevApps.main
-    :members:
-
-
-
-
-
+``MoildevApps.main.``\ ``main``\ ()`¶ <#MoildevApps.main.main>`__
+    Create instance Main window to create the mainwindow of Application.
