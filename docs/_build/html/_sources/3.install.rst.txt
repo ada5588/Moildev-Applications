@@ -1,0 +1,18 @@
+How to Install
+==============
+
+Recently this apps just available for linux OS version. You can following this guidance to install:
+
+1. Go to release Github repositoty here https://github.com/MoilOrg/Moildev-Applications/releases/tag/v1.0
+
+2. Then go to the file directory
+
+3. open terminal
+
+4. To install
+   
+   $ sudo dpkg -i Moildev.deb
+
+5. To uninstall it again, you can use:
+ 
+   $ sudo dpkg --purge Moildev
