@@ -1,0 +1,9 @@
+fbs
+setuptools==39.0.1
+numpy==1.18.1
+opencv-python==4.2.0.34
+pybind11==2.6.2
+PyInstaller==3.4
+PyQt5==5.9.2
+PyQt5-stubs==5.15.2.0
+

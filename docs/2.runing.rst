@@ -1,0 +1,21 @@
+How to run or contribute
+=========================
+
+1. Clone this repository
+
+    $ git clone https://github.com/MoilOrg/Moildev-Applications.git
+
+2. Open the directory
+
+    $ cd Moildev-Applications
+
+3. install requiretment
+
+    $ pip install -r Requirement.txt
+
+4. The runing project
+    
+    $ pyhton MoildevApps/main.py
+
+5. Modify the code and Pull request to repository github
+
